@@ -4,6 +4,7 @@ import com.osiris.desku.App;
 import com.osiris.desku.Route;
 import com.osiris.desku.ui.Component;
 import com.osiris.desku.ui.Layout;
+import com.osiris.desku.ui.Text;
 
 public class Home extends Route {
     public Home() {
@@ -14,8 +15,8 @@ public class Home extends Route {
     public Component<?> loadContent() {
         Layout ly = new Layout();
         ly.sizeFull().childCenter();
-        ly.textXL(App.name);
-        ly.textM("Example app demonstrating Deskus' features.");
+        ly.add(new Text(App.name).sizeXL().selfCenter());
+        ly.add(new Text("Example app demonstrating Deskus' features.").selfCenter());
         return ly;
     }
 }
