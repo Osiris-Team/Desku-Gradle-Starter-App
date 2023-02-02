@@ -1,5 +1,5 @@
 # Desku-Gradle-Starter-App
-Example starter [Desku](https://github.com/fvarrui/JavaPackager) app, built with Gradle.
+Example starter [Desku](https://github.com/Osiris-Team/Desku) app, built with Gradle.
 
 - `build.gradle` file that generates Windows/Linux/Mac installers and binaries
 with the help of [JavaPackager](https://github.com/fvarrui/JavaPackager).
