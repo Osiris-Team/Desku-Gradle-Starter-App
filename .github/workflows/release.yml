@@ -24,7 +24,6 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           tag: ${{ github.event.inputs.version }}
-          commit: main
           generateReleaseNotes: true
 
   build-windows:
