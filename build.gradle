@@ -39,7 +39,7 @@ import io.github.fvarrui.javapackager.model.*;
 group = 'com.osiris'
 version = '1.0.0'
 description = 'Desku example app.'
-sourceCompatibility = '1.8'
+sourceCompatibility = '1.17'
 compileJava.options.encoding = 'UTF-8'
 shadowJar.archiveName = 'bobby.jar'
 
