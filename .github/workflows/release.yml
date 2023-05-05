@@ -45,8 +45,8 @@ jobs:
 
   build-windows:
     runs-on: windows-latest
+    if: ${{ github.event.inputs.build-for-windows == 'true' }}
     needs: release
-    if: ${{ github.event.inputs.build-for-windows }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -61,7 +61,7 @@ jobs:
         run: |
           ./gradlew clean shadowJar packageForWindows --stacktrace --info --no-daemon -x test
           cd ./build
-          native-image -jar ./libs/Desku-App.jar Desku-App-native.exe
+          native-image -jar ./libs/Desku-App.jar Desku-App-native
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.5.0
         with:
@@ -77,8 +77,8 @@ jobs:
 
   build-mac:
     runs-on: macos-latest
+    if: ${{ github.event.inputs.build-for-mac == 'true' }}
     needs: release
-    if: ${{ github.event.inputs.build-for-mac }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -107,8 +107,8 @@ jobs:
 
   build-linux:
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build-for-linux == 'true' }}
     needs: release
-    if: ${{ github.event.inputs.build-for-linux }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -137,8 +137,8 @@ jobs:
 
   build-android:
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build-for-android == 'true' }}
     needs: release
-    if: ${{ github.event.inputs.build-for-android }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -170,8 +170,8 @@ jobs:
 
   build-ios:
     runs-on: macos-latest
+    if: ${{ github.event.inputs.build-for-ios == 'true' }}
     needs: release
-    if: ${{ github.event.inputs.build-for-ios }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
