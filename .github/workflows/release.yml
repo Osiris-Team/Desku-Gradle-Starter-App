@@ -12,6 +12,21 @@ on:
         default: '1.0.0'
         # Input has to be provided for the workflow to run
         required: true
+      build-for-windows:
+        type: boolean
+        default: true
+      build-for-linux:
+        type: boolean
+        default: true
+      build-for-mac:
+        type: boolean
+        default: true
+      build-for-android:
+        type: boolean
+        default: true
+      build-for-ios:
+        type: boolean
+        default: true
 
 jobs:
   release:
@@ -29,6 +44,7 @@ jobs:
   build-windows:
     runs-on: windows-latest
     needs: release
+    if: ${{ github.event.inputs.build-for-windows }} == true
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -45,7 +61,7 @@ jobs:
           cd ./build
           native-image -jar ./libs/Desku-App.jar Desku-App-native.exe
       - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+        uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*.*
@@ -60,6 +76,7 @@ jobs:
   build-mac:
     runs-on: macos-latest
     needs: release
+    if: ${{ github.event.inputs.build-for-mac }} == true
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -74,7 +91,7 @@ jobs:
           sudo chmod +x gradlew
           sudo ./gradlew clean shadowJar packageForMac --stacktrace --info --no-daemon -x test
       - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+        uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*.*
@@ -89,6 +106,7 @@ jobs:
   build-linux:
     runs-on: ubuntu-latest
     needs: release
+    if: ${{ github.event.inputs.build-for-linux }} == true
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -103,7 +121,7 @@ jobs:
           sudo chmod +x gradlew
           sudo ./gradlew clean shadowJar packageForLinux --stacktrace --info --no-daemon -x test
       - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+        uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*.*
@@ -118,6 +136,7 @@ jobs:
   build-android:
     runs-on: ubuntu-latest
     needs: release
+    if: ${{ github.event.inputs.build-for-android }} == true
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -135,7 +154,7 @@ jobs:
           export ANDROID_HOME=$HOME/.android/sdk
           sudo ./gradlew clean android --stacktrace --info --no-daemon -x test
       - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+        uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*.*
@@ -150,6 +169,7 @@ jobs:
   build-ios:
     runs-on: macos-latest
     needs: release
+    if: ${{ github.event.inputs.build-for-ios }} == true
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -164,7 +184,7 @@ jobs:
           sudo chmod +x gradlew
           sudo ./gradlew clean createIpa --stacktrace --info --no-daemon -x test
       - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+        uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*.*
