@@ -70,7 +70,9 @@ jobs:
           components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload
-        run: ./gradlew clean shadowJar packageForMac --stacktrace --info --no-daemon -x test
+        run: |
+          sudo chmod +x gradlew
+          sudo ./gradlew clean shadowJar packageForMac --stacktrace --info --no-daemon -x test
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -97,7 +99,9 @@ jobs:
           components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload
-        run: ./gradlew clean shadowJar packageForLinux --stacktrace --info --no-daemon -x test
+        run: |
+          sudo chmod +x gradlew
+          sudo ./gradlew clean shadowJar packageForLinux --stacktrace --info --no-daemon -x test
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -127,8 +131,9 @@ jobs:
         uses: android-actions/setup-android@v2
       - name: Build and upload
         run: |
+          sudo chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
-          ./gradlew clean android --stacktrace --info --no-daemon -x test
+          sudo ./gradlew clean android --stacktrace --info --no-daemon -x test
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -155,7 +160,9 @@ jobs:
           components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload
-        run: ./gradlew clean createIpa --stacktrace --info --no-daemon -x test
+        run: |
+          sudo chmod +x gradlew
+          sudo ./gradlew clean createIpa --stacktrace --info --no-daemon -x test
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
