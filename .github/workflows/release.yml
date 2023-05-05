@@ -32,18 +32,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: graalvm/setup-graalvm@v1
+      - uses: actions/setup-java@v3
         with:
-          version: 'latest'
+          distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-          components: 'native-image'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload Windows binaries
         shell: pwsh
-        run: |
-          ./gradlew clean shadowJar packageForWindows --stacktrace --info --no-daemon -x test
-          cd ./build
-          native-image -jar ./libs/Desku-App.jar Desku-App-native.exe
+        run: ./gradlew clean shadowJar packageForWindows --stacktrace --info --no-daemon -x test
+#          cd ./build
+#          native-image -jar ./libs/Desku-App.jar Desku-App-native.exe
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -63,12 +60,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: graalvm/setup-graalvm@v1
+      - uses: actions/setup-java@v3
         with:
-          version: 'latest'
+          distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-          components: 'native-image'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload
         shell: pwsh
         run: ./gradlew clean shadowJar packageForMac --stacktrace --info --no-daemon -x test
@@ -91,12 +86,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: graalvm/setup-graalvm@v1
+      - uses: actions/setup-java@v3
         with:
-          version: 'latest'
+          distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-          components: 'native-image'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload
         shell: pwsh
         run: ./gradlew clean shadowJar packageForLinux --stacktrace --info --no-daemon -x test
@@ -119,12 +112,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: graalvm/setup-graalvm@v1
+      - uses: actions/setup-java@v3
         with:
-          version: 'latest'
+          distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-          components: 'native-image'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
       - name: Build and upload
@@ -151,12 +142,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: graalvm/setup-graalvm@v1
+      - uses: actions/setup-java@v3
         with:
-          version: 'latest'
+          distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-          components: 'native-image'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload
         shell: pwsh
         run: ./gradlew clean createIpa --stacktrace --info --no-daemon -x test
