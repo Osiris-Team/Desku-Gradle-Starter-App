@@ -1,16 +1,17 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+        maven {url 'https://jitpack.io'}
+        maven{url 'https://oss.sonatype.org/content/repositories/snapshots'}
     }
     dependencies {
-        classpath 'com.github.johnrengelman:shadow:7.1.1'
-        classpath 'io.github.fvarrui:javapackager:1.6.7'
+        classpath 'com.github.johnrengelman:shadow:8.1.1'
+        classpath 'io.github.fvarrui:javapackager:1.7.3-20230505.163915-1'
     }
 }
 
 plugins {
-    id 'com.github.johnrengelman.shadow' version '7.1.1'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'java'
     id 'maven-publish'
 }
@@ -41,7 +42,6 @@ version = '1.0.0'
 description = 'Desku example app.'
 sourceCompatibility = '1.17'
 compileJava.options.encoding = 'UTF-8'
-shadowJar.archiveName = 'bobby.jar'
 
 javapackager {
     mainClass = 'com.osiris.deskuapp.Main'
