@@ -4,15 +4,18 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
+        classpath 'com.github.johnrengelman:shadow:7.1.1'
         classpath 'io.github.fvarrui:javapackager:1.6.7'
     }
 }
 
 plugins {
+    id 'com.github.johnrengelman.shadow' version '7.1.1'
     id 'java'
     id 'maven-publish'
 }
 
+apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'io.github.fvarrui.javapackager.plugin'
 
 repositories {
@@ -38,16 +41,21 @@ version = '1.0.0'
 description = 'Desku example app.'
 sourceCompatibility = '1.8'
 compileJava.options.encoding = 'UTF-8'
-def mainClass = 'com.osiris.deskuapp.Main'
-def mainPackage = 'com.osiris.deskuapp'
+shadowJar.archiveName = 'bobby.jar'
 
 javapackager {
-    mainClass = '${mainClass}'
+    mainClass = 'com.osiris.deskuapp.Main'
     additionalResources = [ file('src/main/resources/info.txt') ]
     bundleJre = true
     generateInstaller = true
     vmArgs = ["-Djava.library.path=."]
     administratorRequired = false
+}
+// Output to build/libs/<project-name>.jar
+shadowJar {
+    archiveBaseName.set(rootProject.name)
+    archiveClassifier.set('')
+    archiveVersion.set('')
 }
 
 task packageForWindows(type: PackageTask, dependsOn: build) {

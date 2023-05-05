@@ -25,6 +25,21 @@ jobs:
         with:
           tag: ${{ github.event.inputs.version }}
           generateReleaseNotes: true
+      - name: Build and upload jar files
+        shell: pwsh
+        run: ./gradlew clean shadowJar --stacktrace --info --no-daemon -x test
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./build/libs/*.*
+          tag: ${{ github.event.inputs.version }}
+          overwrite: true
+          file_glob: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: target-windows
+          path: ./build/
 
   build-windows:
     runs-on: windows-latest
@@ -38,9 +53,12 @@ jobs:
           java-version: '17'
           components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and upload
+      - name: Build and upload Windows binaries
         shell: pwsh
-        run: ./gradlew clean packageForWindows --stacktrace --info --no-daemon -x test
+        run: |
+          ./gradlew clean packageForWindows --stacktrace --info --no-daemon -x test
+          cd ./build
+          native-image -jar ./libs/Desku-App.jar Desku-App-native.exe
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
