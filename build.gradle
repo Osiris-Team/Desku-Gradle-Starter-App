@@ -24,7 +24,7 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-    implementation 'com.github.Osiris-Team:Desku:0.5.8'
+    implementation 'com.github.Osiris-Team:Desku:0.7.2'
     implementation 'commons-io:commons-io:2.6'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
