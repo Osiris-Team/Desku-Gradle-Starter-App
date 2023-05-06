@@ -60,6 +60,7 @@ jobs:
         shell: pwsh
         run: |
           ./gradlew clean shadowJar packageForWindows --stacktrace --info --no-daemon -x test
+          echo "Building Native-Image..."
           cd ./build
           native-image -jar ./libs/Desku-App.jar Desku-App-windows-runnable
       - name: Upload binaries to release
@@ -92,6 +93,8 @@ jobs:
         run: |
           sudo chmod +x gradlew
           sudo ./gradlew clean shadowJar packageForMac --stacktrace --info --no-daemon -x test
+          echo "Building Native-Image..."
+          cd ./build
           native-image -jar ./libs/Desku-App.jar Desku-App-mac-runnable
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.5.0
@@ -126,6 +129,8 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
           sudo ./gradlew clean shadowJar packageForLinux --stacktrace --info --no-daemon -x test
+          echo "Building Native-Image..."
+          cd ./build
           native-image -jar ./libs/Desku-App.jar Desku-App-linux-runnable
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.5.0
@@ -162,7 +167,9 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
-          sudo ./gradlew clean android --stacktrace --info --no-daemon -x test
+          sudo ./gradlew clean shadowJar android --stacktrace --info --no-daemon -x test
+          echo "Building Native-Image..."
+          cd ./build
           native-image -jar ./libs/Desku-App.jar Desku-App-android-runnable
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.5.0
@@ -196,7 +203,9 @@ jobs:
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
-          sudo ./gradlew clean createIpa --stacktrace --info --no-daemon -x test
+          sudo ./gradlew clean shadowJar createIpa --stacktrace --info --no-daemon -x test
+          echo "Building Native-Image..."
+          cd ./build
           native-image -jar ./libs/Desku-App.jar Desku-App-ios-runnable
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.5.0
