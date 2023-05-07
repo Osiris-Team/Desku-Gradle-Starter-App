@@ -128,8 +128,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload
         run: |
-          echo "export JAVA_HOME=$GRAALVM_HOME" >> ~/.bashrc
-          source ~/.bashrc
+          sudo su
+          echo "export JAVA_HOME=$GRAALVM_HOME" >> /root/.bashrc
+          source /root/.bashrc
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
@@ -169,8 +170,9 @@ jobs:
         uses: android-actions/setup-android@v2
       - name: Build and upload
         run: |
-          echo "export JAVA_HOME=$GRAALVM_HOME" >> ~/.bashrc
-          source ~/.bashrc
+          sudo su
+          echo "export JAVA_HOME=$GRAALVM_HOME" >> /root/.bashrc
+          source /root/.bashrc
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
@@ -209,8 +211,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload
         run: |
-          echo "export JAVA_HOME=$GRAALVM_HOME" >> ~/.bashrc
-          source ~/.bashrc
+          sudo su
+          echo "export JAVA_HOME=$GRAALVM_HOME" >> /root/.bashrc
+          source /root/.bashrc
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
