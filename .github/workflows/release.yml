@@ -210,7 +210,7 @@ jobs:
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
-         ./gradlew clean shadowJar createIpa --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar createIpa --stacktrace --info --no-daemon -x test
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
