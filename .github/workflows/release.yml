@@ -170,19 +170,17 @@ jobs:
         uses: android-actions/setup-android@v2
       - name: Build and upload
         run: |
-          sudo echo "export JAVA_HOME=$GRAALVM_HOME" >> /root/.bashrc
-          sudo source /root/.bashrc
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
-          sudo chmod +x gradlew
+          chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
-          ./gradlew clean shadowJar android:build --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar android:build android:packageDebug android:packageDebugBundle --stacktrace --info --no-daemon -x test
           cd ./android
           echo "Contents of ./build folder:"
           find ./build
-          echo "Building Native-Image..."
-          cd ./build
-          native-image -jar ./libs/Desku-App.jar Desku-App-android-runnable
+        #echo "Building Native-Image..."
+        #cd ./build
+        #native-image -jar ./libs/Desku-App.jar Desku-App-android-runnable
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.5.0
         with:
@@ -191,10 +189,6 @@ jobs:
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
-      - uses: actions/upload-artifact@v3
-        with:
-          name: target-android
-          path: ./build/
 
   build-ios:
     runs-on: macos-latest
@@ -214,23 +208,21 @@ jobs:
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
-          ./gradlew clean shadowJar ios:build --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar ios:build ios:robovmArchive --stacktrace --info --no-daemon -x test
           cd ./ios
           echo "Contents of ./build folder:"
           find ./build
-          echo "Building Native-Image..."
-          cd ./build
-          native-image -jar ./libs/Desku-App.jar Desku-App-ios-runnable
+        #echo "Building Native-Image..."
+        #cd ./build
+        #native-image -jar ./libs/Desku-App.jar Desku-App-ios-runnable
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./build/*.*
+          file:  |
+            ./build/*.*
+            ./build/robovm/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
-      - uses: actions/upload-artifact@v3
-        with:
-          name: target-ios
-          path: ./build/
 
