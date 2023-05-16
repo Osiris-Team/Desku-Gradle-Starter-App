@@ -1,2 +1,1 @@
-rootProject.name = 'Desku-App'
-
+include 'ios', 'desktop', 'android', 'core'

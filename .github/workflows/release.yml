@@ -59,7 +59,7 @@ jobs:
       - name: Build and upload Windows binaries
         shell: pwsh
         run: |
-          ./gradlew clean shadowJar packageForWindows --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar desktop:packageForWindows --stacktrace --info --no-daemon -x test
           echo "Contents of ./build folder:"
           Get-ChildItem -Path "./build" -Recurse
           echo "Building Native-Image..."
@@ -94,7 +94,7 @@ jobs:
       - name: Build and upload
         run: |
           sudo chmod +x gradlew
-          ./gradlew clean shadowJar packageForMac --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar desktop:packageForMac --stacktrace --info --no-daemon -x test
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
@@ -131,7 +131,7 @@ jobs:
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
-          ./gradlew clean shadowJar packageForLinux --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar desktop:packageForLinux --stacktrace --info --no-daemon -x test
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
@@ -173,7 +173,7 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
-          ./gradlew clean shadowJar android --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar android:build --stacktrace --info --no-daemon -x test
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
@@ -210,7 +210,7 @@ jobs:
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
-          ./gradlew clean shadowJar createIpa --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar ios:build --stacktrace --info --no-daemon -x test
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
@@ -228,4 +228,4 @@ jobs:
         with:
           name: target-ios
           path: ./build/
- 
+

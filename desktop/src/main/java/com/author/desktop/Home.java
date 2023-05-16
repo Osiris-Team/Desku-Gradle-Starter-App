@@ -1,4 +1,4 @@
-package com.osiris.deskuapp;
+package com.author.desktop;
 
 import com.osiris.desku.App;
 import com.osiris.desku.Route;
