@@ -60,6 +60,7 @@ jobs:
         shell: pwsh
         run: |
           ./gradlew clean shadowJar desktop:packageForWindows --stacktrace --info --no-daemon -x test
+          cd ./desktop
           echo "Contents of ./build folder:"
           Get-ChildItem -Path "./build" -Recurse
           echo "Building Native-Image..."
@@ -95,6 +96,7 @@ jobs:
         run: |
           sudo chmod +x gradlew
           ./gradlew clean shadowJar desktop:packageForMac --stacktrace --info --no-daemon -x test
+          cd ./desktop
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
@@ -132,6 +134,7 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
           ./gradlew clean shadowJar desktop:packageForLinux --stacktrace --info --no-daemon -x test
+          cd ./desktop
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
@@ -174,6 +177,7 @@ jobs:
           sudo chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
           ./gradlew clean shadowJar android:build --stacktrace --info --no-daemon -x test
+          cd ./android
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
@@ -211,6 +215,7 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           sudo chmod +x gradlew
           ./gradlew clean shadowJar ios:build --stacktrace --info --no-daemon -x test
+          cd ./ios
           echo "Contents of ./build folder:"
           find ./build
           echo "Building Native-Image..."
