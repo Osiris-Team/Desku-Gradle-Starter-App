@@ -1,4 +1,4 @@
-package com.osiris.jsqlgen.android;
+package com.author.android;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

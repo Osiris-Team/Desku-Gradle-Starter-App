@@ -1,4 +1,4 @@
-package com.osiris.jsqlgen.android;
+package com.author.android;
 
 import android.app.Activity;
 

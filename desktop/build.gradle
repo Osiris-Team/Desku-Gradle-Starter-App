@@ -36,7 +36,7 @@ dependencies {
 import io.github.fvarrui.javapackager.gradle.PackageTask;
 import io.github.fvarrui.javapackager.model.*;
 
-group = 'com.osiris'
+group = 'com.author.desktop'
 version = '1.0.0'
 description = 'Desku example app.'
 sourceCompatibility = '1.17' // Desku is compatible with 1.8 or higher

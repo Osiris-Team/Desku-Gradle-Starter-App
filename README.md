@@ -20,7 +20,7 @@ sdk.dir=C:/Users/INSERT_USER_NAME/AppData/Local/Android/Sdk
 ```
 Note that renaming directories can be a bit tricky, specially for the namespace `com.author.android`
 since it's referenced in `build.gradle` and `AndroidManifest.xml`, thus remember to
-change those too.
+change those too (you will also have to re-build/re-sync your project).
 
 ## Gradle
 
