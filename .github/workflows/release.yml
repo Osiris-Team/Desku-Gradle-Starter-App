@@ -174,7 +174,7 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
-          ./gradlew clean shadowJar android:build android:packageDebug android:packageDebugBundle --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar android:build android:packageRelease android:packageReleaseBundle --stacktrace --info --no-daemon -x test
           cd ./android
           echo "Contents of ./build folder:"
           find ./build
@@ -185,7 +185,12 @@ jobs:
         uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./build/*.*
+          file: |
+            ./build/*.*
+            ./build/outputs/apk/debug/*.*
+            ./build/outputs/apk/release/*.*
+            ./build/outputs/bundle/debug/*.*
+            ./build/outputs/bundle/release/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true

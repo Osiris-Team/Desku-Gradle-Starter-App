@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.osiris.desku.App;
-import com.osiris.jsqlgen.Main;
+import com.author.core.Main;
 
 /** Launches the Android application. */
 public class AndroidLauncher extends Activity {

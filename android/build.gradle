@@ -32,14 +32,14 @@ android {
     exclude '**/*.gwt.xml'
   }
   defaultConfig {
-    applicationId 'com.osiris.jsqlgen'
+    applicationId 'com.author.android'
     minSdkVersion 19
     targetSdkVersion 30
     versionCode 1
     versionName "1.0"
     multiDexEnabled true
   }
-  namespace "com.osiris.jsqlgen"
+  namespace "com.author.android"
   compileOptions {
     sourceCompatibility "1.8"
     targetCompatibility "1.8"
@@ -118,7 +118,7 @@ task run(type: Exec) {
   }
 
   def adb = path + "/platform-tools/adb"
-  commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.osiris.jsqlgen/com.osiris.jsqlgen.android.AndroidLauncher'
+  commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.author.android/com.author.android.AndroidLauncher'
 }
 
 eclipse.project.name = appName + "-android"
