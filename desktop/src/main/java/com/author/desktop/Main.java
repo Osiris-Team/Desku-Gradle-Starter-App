@@ -2,18 +2,17 @@ package com.author.desktop;
 
 import com.osiris.desku.App;
 import com.osiris.desku.DesktopUI;
+import com.osiris.desku.DesktopUIManager;
 import com.osiris.desku.UI;
 
 import java.io.IOException;
 
 public class Main {
-    public static final Home home = new Home();
 
-    public static void main(String[] args) throws IOException {
-        App.name = "Desku-App";
+    public static void main(String[] args) {
         try {
-            DesktopUI ui = (DesktopUI) App.uis.create(home);
-            ui.openDevTools();
+            App.init(new DesktopUIManager(false));
+            com.author.core.Main.main(args);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

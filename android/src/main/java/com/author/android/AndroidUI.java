@@ -40,6 +40,9 @@ public class AndroidUI extends UI {
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     public void init(String startURL, boolean isTransparent, int widthPercent, int heightPercent) throws Exception {
+        // Remove first / to ensure file:///path and not file:////path is used as url.
+        if(startURL.startsWith("/")) startURL = startURL.substring(1);
+
         // Create a new WebView instance
         Context context = AndroidUIManager.mainActivity.getApplicationContext(); // Replace with your context reference
         webView = new WebView(context);
