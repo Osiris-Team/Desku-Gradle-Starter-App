@@ -56,7 +56,8 @@ jobs:
           java-version: '17'
           components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and upload Windows binaries
+      - name: Build
+        continue-on-error: true
         shell: pwsh
         # Also sets path for candle and light
         run: |
@@ -76,10 +77,6 @@ jobs:
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
-      - uses: actions/upload-artifact@v3
-        with:
-          name: target-windows
-          path: ./build/
 
   build-mac:
     runs-on: macos-latest
@@ -94,7 +91,8 @@ jobs:
           java-version: '17'
           components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and upload
+      - name: Build
+        continue-on-error: true
         run: |
           sudo chmod +x gradlew
           ./gradlew clean shadowJar desktop:packageForMac --stacktrace --info --no-daemon -x test
@@ -130,7 +128,8 @@ jobs:
           java-version: '17'
           components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and upload
+      - name: Build
+        continue-on-error: true
         run: |
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
@@ -170,7 +169,8 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
-      - name: Build and upload
+      - name: Build
+        continue-on-error: true
         # Add tasks android:packageRelease android:packageReleaseBundle if you want to created signed release ready apk and bundle
         # https://developer.android.com/studio/publish/app-signing
         run: |
@@ -209,7 +209,8 @@ jobs:
           java-version: '17'
           components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and upload
+      - name: Build
+        continue-on-error: true
         run: |
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
