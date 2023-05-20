@@ -73,7 +73,7 @@ jobs:
         uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./build/*.*
+          file: ./desktop/build/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
@@ -106,14 +106,10 @@ jobs:
         uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./build/*.*
+          file: ./desktop/build/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
-      - uses: actions/upload-artifact@v3
-        with:
-          name: target-mac
-          path: ./build/
 
   build-linux:
     runs-on: ubuntu-latest
@@ -145,14 +141,10 @@ jobs:
         uses: svenstaro/upload-release-action@2.5.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./build/*.*
+          file: ./desktop/build/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
-      - uses: actions/upload-artifact@v3
-        with:
-          name: target-linux
-          path: ./build/
 
   build-android:
     runs-on: ubuntu-latest
@@ -191,8 +183,8 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: |
-            ./build/outputs/apk/debug/*.*
-            ./build/outputs/apk/release/*.*
+            ./android/build/outputs/apk/debug/*.*
+            ./android/build/outputs/apk/release/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
@@ -230,7 +222,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file:  |
-            ./build/robovm/*.*
+            ./ios/build/robovm/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
