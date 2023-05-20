@@ -21,3 +21,7 @@ dependencies {
   implementation "com.mobidevelop.robovm:robovm-rt:$robovmVersion"
   implementation project(':core')
 }
+
+robovm {
+  iosSkipSigning = true
+}

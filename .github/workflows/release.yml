@@ -171,14 +171,15 @@ jobs:
         uses: android-actions/setup-android@v2
       - name: Build
         continue-on-error: true
-        # Add tasks android:packageRelease android:packageReleaseBundle if you want to created signed release ready apk and bundle
+        # Add tasks android:packageRelease android:packageReleaseBundle if you want to created signed release ready apk and bundle.
+        # Also remove -x android:validateSigningDebug from below in that case.
         # https://developer.android.com/studio/publish/app-signing
         run: |
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
-          ./gradlew clean shadowJar android:build --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar android:build -x android:validateSigningDebug --stacktrace --info --no-daemon -x test
           cd ./android
           echo "Contents of ./build folder:"
           find ./build
@@ -211,6 +212,8 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         continue-on-error: true
+        # If you want to release a signed .ipa follow these steps:
+        # https://stackoverflow.com/questions/25133774/robovm-missing-signing-identity
         run: |
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
