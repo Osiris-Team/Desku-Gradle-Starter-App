@@ -224,7 +224,6 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file:  |
-            ./build/*.*
             ./build/robovm/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
