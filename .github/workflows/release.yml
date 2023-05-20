@@ -23,10 +23,10 @@ on:
         default: true
       build-for-android:
         type: boolean
-        default: false
+        default: true
       build-for-ios:
         type: boolean
-        default: false
+        default: true
 
 permissions: write-all
 
