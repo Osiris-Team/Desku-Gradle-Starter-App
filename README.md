@@ -2,7 +2,7 @@
 Example starter [Desku](https://github.com/Osiris-Team/Desku) app, built with Gradle.
 
 ## Release
-`.github/workflows/release.yml`: creates a release, generates and uploads
+`.github/workflows/release.yml` (partially working): creates a release, generates and uploads
 all supported, platform-specific installers and binaries. Head over to the 'Actions' tab,
 select 'release' and press on 'Run Workflow' to execute it.
 
@@ -30,7 +30,7 @@ since it's referenced in `build.gradle` and `AndroidManifest.xml`, thus remember
 change those too (you will also have to re-build/re-sync your project).
 
 ## iOS
-`com.author.ios`: uses [RoboVM](https://github.com/MobiVM/robovm) and its [WebView](https://github.com/robovm/robovm-samples/blob/master/ios-no-ib/samplewebapp-no-ib/src/main/java/org/robovm/samples/samplewebapp/ui/WebViewController.java).
+`com.author.ios` (not tested): uses [RoboVM](https://github.com/MobiVM/robovm) and its [WebView](https://github.com/robovm/robovm-samples/blob/master/ios-no-ib/samplewebapp-no-ib/src/main/java/org/robovm/samples/samplewebapp/ui/WebViewController.java).
 Building this requires MacOS.
 
 ## Gradle
