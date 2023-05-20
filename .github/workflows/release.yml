@@ -163,15 +163,15 @@ jobs:
         uses: android-actions/setup-android@v2
       - name: Build
         continue-on-error: true
-        # Add tasks android:packageRelease android:packageReleaseBundle if you want to created signed release ready apk and bundle.
-        # Also remove -x android:validateSigningDebug from below in that case.
+        # Release singing:
         # https://developer.android.com/studio/publish/app-signing
+        # https://medium.com/google-developer-experts/github-actions-for-android-developers-6b54c8a32f55
         run: |
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
-          ./gradlew clean shadowJar android:build -x android:validateSigningDebug --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar android:build --stacktrace --info --no-daemon -x test
           cd ./android
           echo "Contents of ./build folder:"
           find ./build
