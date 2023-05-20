@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 
 android {
-  compileSdk 30
+  compileSdk 31
   sourceSets {
     main {
       manifest.srcFile 'AndroidManifest.xml'
@@ -16,8 +16,10 @@ android {
   }
   packagingOptions {
     // Preventing from license violations (more or less):
+    pickFirst 'META-INF/INDEX.LIST'
     pickFirst 'META-INF/LICENSE.txt'
     pickFirst 'META-INF/LICENSE'
+    pickFirst 'META-INF/LICENSE.md'
     pickFirst 'META-INF/license.txt'
     pickFirst 'META-INF/LGPL2.1'
     pickFirst 'META-INF/NOTICE.txt'

@@ -8,11 +8,11 @@ import org.robovm.apple.foundation.NSURLRequest;
 import java.io.IOException;
 
 public class IOSUI extends UI {
-    public IOSUI(Route route) throws IOException {
+    public IOSUI(Route route) throws Exception {
         super(route);
     }
 
-    public IOSUI(Route route, boolean isTransparent, int widthPercent, int heightPercent) throws IOException {
+    public IOSUI(Route route, boolean isTransparent, int widthPercent, int heightPercent) throws Exception {
         super(route, isTransparent, widthPercent, heightPercent);
     }
 

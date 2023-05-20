@@ -2,6 +2,8 @@ package com.author.android;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.StrictMode;
 import android.util.Log;
 
@@ -11,6 +13,7 @@ import com.author.core.Main;
 /** Launches the Android application. */
 public class AndroidLauncher extends Activity {
 
+    public static Handler mainHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,12 @@ public class AndroidLauncher extends Activity {
             .build();
         StrictMode.setThreadPolicy(policy);
 
+        mainHandler = new Handler(Looper.getMainLooper());
+
+
         App.init(new AndroidUIManager());
-        Main.main(new String[]{});
+        new Thread(() -> {
+            Main.main(new String[]{});
+        }).start();
     }
 }
