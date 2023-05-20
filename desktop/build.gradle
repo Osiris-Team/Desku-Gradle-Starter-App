@@ -45,7 +45,7 @@ compileJava.options.encoding = 'UTF-8'
 javapackager {
   mainClass = 'com.author.desktop.Main'
   additionalResources = [ file('src/main/resources/info.txt') ]
-  bundleJre = true
+  customizedJre = true
   generateInstaller = true
   vmArgs = ["-Djava.library.path=."]
   administratorRequired = false
