@@ -171,6 +171,7 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
+          keytool -genkey -v -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey -keypass android -dname "CN=Android Debug,O=Android,C=US"
           ./gradlew clean shadowJar android:build --stacktrace --info --no-daemon -x test
           cd ./android
           echo "Contents of ./build folder:"
