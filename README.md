@@ -2,23 +2,23 @@
 Example starter [Desku](https://github.com/Osiris-Team/Desku) app, built with Gradle.
 
 ## Release
-The `.github/workflows/release.yml` workflow file that creates a release, generates and uploads
-all supported, platform-specific installers/binaries. Head over to the 'Actions' tab,
+`.github/workflows/release.yml`: creates a release, generates and uploads
+all supported, platform-specific installers and binaries. Head over to the 'Actions' tab,
 select 'release' and press on 'Run Workflow' to execute it.
 
 ## Core
-Has the namespace `com.author.core` and is the place where you will
+`com.author.core`: the place where you will
 develop your application with Desku. It contains the UI and application logic that
 is shared by all platforms.
 
 ## Desktop
-Has the namespace `com.author.desktop` and uses [Swing](https://de.wikipedia.org/wiki/Swing_(Java)) and [JCEF](https://bitbucket.org/chromiumembedded/java-cef). 
+`com.author.desktop`: uses [Swing](https://de.wikipedia.org/wiki/Swing_(Java)) and [JCEF](https://bitbucket.org/chromiumembedded/java-cef). 
 Its `build.gradle` file generates Windows/Linux/Mac installers with the help of [JavaPackager](https://github.com/fvarrui/JavaPackager).
 The `.github/workflows/release.yml` also uses [GraalVM](https://www.graalvm.org/) and [Native Image](https://www.graalvm.org/22.0/reference-manual/native-image/) 
 to generate standalone executables/binaries of your app.
 
 ## Android
-Has the namespace `com.author.android` that uses the [Android WebView](https://developer.android.com/reference/android/webkit/WebView) and requires you
+`com.author.android`: uses the [Android WebView](https://developer.android.com/reference/android/webkit/WebView) and requires you
 to have [Android Studio](https://developer.android.com/studio) installed.
 Create the `local.properties` file in this directory looking like this:
 ```properties
@@ -30,7 +30,7 @@ since it's referenced in `build.gradle` and `AndroidManifest.xml`, thus remember
 change those too (you will also have to re-build/re-sync your project).
 
 ## iOS
-Has the namespace `com.author.ios` and using [RoboVM](https://github.com/MobiVM/robovm) and its [WebView](https://github.com/robovm/robovm-samples/blob/master/ios-no-ib/samplewebapp-no-ib/src/main/java/org/robovm/samples/samplewebapp/ui/WebViewController.java).
+`com.author.ios`: uses [RoboVM](https://github.com/MobiVM/robovm) and its [WebView](https://github.com/robovm/robovm-samples/blob/master/ios-no-ib/samplewebapp-no-ib/src/main/java/org/robovm/samples/samplewebapp/ui/WebViewController.java).
 Building this requires MacOS.
 
 ## Gradle
