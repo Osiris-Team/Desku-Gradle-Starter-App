@@ -169,12 +169,14 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
       - name: Build and upload
+        # Add tasks android:packageRelease android:packageReleaseBundle if you want to created signed release ready apk and bundle
+        # https://developer.android.com/studio/publish/app-signing
         run: |
           echo "GRAALVM_HOME: $GRAALVM_HOME"
           echo "JAVA_HOME: $JAVA_HOME"
           chmod +x gradlew
           export ANDROID_HOME=$HOME/.android/sdk
-          ./gradlew clean shadowJar android:build android:packageRelease android:packageReleaseBundle --stacktrace --info --no-daemon -x test
+          ./gradlew clean shadowJar android:build --stacktrace --info --no-daemon -x test
           cd ./android
           echo "Contents of ./build folder:"
           find ./build
@@ -186,11 +188,8 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: |
-            ./build/*.*
             ./build/outputs/apk/debug/*.*
             ./build/outputs/apk/release/*.*
-            ./build/outputs/bundle/debug/*.*
-            ./build/outputs/bundle/release/*.*
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true

@@ -1,11 +1,9 @@
-package com.author.core.ios;
+package com.author.ios;
 
 import com.osiris.desku.Route;
 import com.osiris.desku.UI;
 import org.robovm.apple.foundation.NSURL;
 import org.robovm.apple.foundation.NSURLRequest;
-
-import java.io.IOException;
 
 public class IOSUI extends UI {
     public IOSUI(Route route) throws Exception {

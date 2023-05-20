@@ -1,4 +1,4 @@
-package com.author.core.ios;
+package com.author.ios;
 
 import com.author.core.Main;
 import com.osiris.desku.App;
