@@ -11,7 +11,7 @@ select 'release' and press on 'Run Workflow' to execute it.
 develop your application with Desku. It contains the UI and application logic that
 is shared by all platforms.
 
-## Desktop
+## Desktop (Windows/Linux/Mac)
 `com.author.desktop`: uses [Swing](https://de.wikipedia.org/wiki/Swing_(Java)) and [JCEF](https://bitbucket.org/chromiumembedded/java-cef). 
 Its `build.gradle` file generates Windows/Linux/Mac installers with the help of [JavaPackager](https://github.com/fvarrui/JavaPackager).
 The `.github/workflows/release.yml` also uses [GraalVM](https://www.graalvm.org/) and [Native Image](https://www.graalvm.org/22.0/reference-manual/native-image/) 
