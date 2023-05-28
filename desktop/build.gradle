@@ -6,7 +6,7 @@ buildscript {
   }
   dependencies {
     classpath 'com.github.johnrengelman:shadow:8.1.1'
-    classpath 'io.github.fvarrui:javapackager:1.7.3-20230505.163915-1'
+    classpath 'io.github.fvarrui:javapackager:1.7.3-20230525.235840-4'
   }
 }
 
