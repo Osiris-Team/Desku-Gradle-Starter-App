@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 
-
 android {
   compileSdk 31
   sourceSets {
@@ -16,6 +15,7 @@ android {
   }
   packagingOptions {
     // Preventing from license violations (more or less):
+    pickFirst 'META-INF/AL2.0'
     pickFirst 'META-INF/INDEX.LIST'
     pickFirst 'META-INF/LICENSE.txt'
     pickFirst 'META-INF/LICENSE'
@@ -43,8 +43,8 @@ android {
   }
   namespace "com.author.android"
   compileOptions {
-    sourceCompatibility "1.8"
-    targetCompatibility "1.8"
+    sourceCompatibility "1.11"
+    targetCompatibility "1.11"
     coreLibraryDesugaringEnabled true
   }
 
