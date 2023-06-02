@@ -6,7 +6,7 @@ import com.osiris.desku.ui.Component;
 import com.osiris.desku.ui.display.RTable;
 import com.osiris.desku.ui.display.Table;
 import com.osiris.desku.ui.display.Text;
-import com.osiris.desku.ui.layout.Layout;
+import com.osiris.desku.ui.layout.Vertical;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import static com.osiris.desku.Statics.*;
 public class Home extends Route {
     static {
         try {
-            App.appendToGlobalStyles(App.getCSS(Home.class));
+            App.appendToGlobalCSS(App.getCSS(Home.class));
             App.appendToGlobalJS(App.getJS(Home.class));
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -30,11 +30,11 @@ public class Home extends Route {
 
     @Override
     public Component<?> loadContent() {
-        Layout ly = layout().spacing(true).padding(true);
+        Vertical ly = vertical().childGap(true).padding(true);
         ly.add(new Text(App.name).sizeXL().selfCenter());
         ly.add(new Text("Desku template app to get started quickly.").selfCenter());
 
-        ly.horizontal().size("100%", "70vh").childCenter()
+        ly.horizontalCL().size("100%", "70vh").childCenter()
                 .add(text("Build Desktop Apps with Java, HTML and CSS today!")
                         .sizeXXL().selfCenter()
                         .size("40vh", "20vh").bold())
@@ -56,7 +56,7 @@ public class Home extends Route {
                 e.printStackTrace();
             }
         }));
-        ly.add(layout().size("300px", "100px").laterWithOverlay((comp, overlay) -> {
+        ly.add(vertical().size("300px", "100px").laterWithOverlay((comp, overlay) -> {
             try {
                 Text txt = text("Waiting 10 seconds...");
                 comp.add(txt);
@@ -71,7 +71,7 @@ public class Home extends Route {
         //
         // Layouts
         //
-        ly.vertical()
+        ly.verticalCL()
                 .add(text("Child vertical layout. Items: "))
                 .add(text("XSmall").sizeXS())
                 .add(text("Small").sizeS())
@@ -82,7 +82,7 @@ public class Home extends Route {
                 .add(text("XXLarge").sizeXXL())
                 .add(text("XXXLarge").sizeXXXL());
 
-        ly.horizontal()
+        ly.horizontalCL()
                 .add(text("Child horizontal layout. Items: "))
                 .add(text("XSmall").sizeXS())
                 .add(text("Small").sizeS())
@@ -96,15 +96,15 @@ public class Home extends Route {
         // Overlays
         //
         ly.add(overlay(null).add(text("Overlay over the page")));
-        ly.vertical().putStyle("background-color", "blue").size("100px", "100px").add(
-                overlay(ly.lastAdded).putStyle("background-color", "red")
+        ly.verticalCL().putStyle("background-color", "blue").size("100px", "100px").add(
+                overlay(ly.lastChild()).putStyle("background-color", "red")
                         .add(text("Overlay over parent.")));
 
         //
         // Inputs
         //
         AtomicInteger i = new AtomicInteger();
-        ly.horizontal().spacing(true).width("100%")
+        ly.horizontalCL().childGap(true).width("100%")
                 .add(button("This is a button!").grow(1).onClick(e -> {
             String s = "Clicked " + i.incrementAndGet() + " times";
             System.out.println(s);
