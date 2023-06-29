@@ -19,7 +19,7 @@
   </resources>
   <forceLinkClasses>
       <!-- To support reflection in general, everything is included -->
-      <pattern>*</pattern>
+      <pattern>**</pattern>
   </forceLinkClasses>
   <libs>
       <lib>z</lib>
