@@ -18,7 +18,8 @@ public class IOSLauncher extends UIApplicationDelegateAdapter {
         rootViewController.setView(webView);
         window.setRootViewController(rootViewController);
 
-        App.init(new IOSUIManager());
+        App.LoggerParams loggerParams = new App.LoggerParams();
+        App.init(new IOSUIManager(), loggerParams);
         Main.main(new String[]{});
 
         // Make the window visible

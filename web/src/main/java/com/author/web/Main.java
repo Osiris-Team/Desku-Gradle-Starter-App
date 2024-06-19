@@ -7,7 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            App.init(new DesktopUIManager()); // TODO create WebUIManager that actually launches springboot
+            App.LoggerParams loggerParams = new App.LoggerParams();
+            App.init(new DesktopUIManager(), loggerParams); // TODO create WebUIManager that actually launches springboot
             com.author.core.Main.main(args);
         } catch (Exception e) {
             throw new RuntimeException(e);
