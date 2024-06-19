@@ -6,10 +6,13 @@ Example starter [Desku](https://github.com/Osiris-Team/Desku) app, built with Gr
 all supported, platform-specific installers and binaries. Head over to the 'Actions' tab,
 select 'release' and press on 'Run Workflow' to execute it.
 
-## Core
-`com.author.core`: the place where you will
+## Core 
+**`com.author.core`: the place where you will
 develop your application with Desku. It contains the UI and application logic that
-is shared by all platforms.
+is shared by all platforms.**
+
+If you don't want to use a platform below you can simply delete its directory
+and remove the module name from ./settings.gradle file.
 
 ## Desktop (Windows/Linux/Mac)
 `com.author.desktop`: uses [Swing](https://de.wikipedia.org/wiki/Swing_(Java)) and [WebView](https://github.com/webview/webview_java). 

@@ -6,7 +6,7 @@ buildscript {
   }
   dependencies {
     classpath 'com.github.johnrengelman:shadow:8.1.1'
-    classpath 'io.github.fvarrui:javapackager:1.7.3-20230525.235840-4'
+    classpath 'io.github.fvarrui:javapackager:1.7.5'
   }
 }
 
@@ -44,7 +44,6 @@ compileJava.options.encoding = 'UTF-8'
 
 javapackager {
   mainClass = 'com.author.desktop.Main'
-  additionalResources = [ file('src/main/resources/info.txt') ]
   customizedJre = true
   generateInstaller = true
   vmArgs = ["-Djava.library.path=."]

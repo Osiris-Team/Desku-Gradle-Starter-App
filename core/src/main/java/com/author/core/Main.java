@@ -1,10 +1,14 @@
 package com.author.core;
 
+import com.author.core.about.About;
 import com.author.core.home.Home;
 import com.osiris.desku.App;
 
 public class Main {
+    // Register routes
+    public static About about = new About();
     public static Home home = new Home();
+
     public static void main(String[] args) {
         // App.init(...) is done in each platform-specific repo, before calling this main method,
         // with the platform-specific implementations of UI and UIManager.
