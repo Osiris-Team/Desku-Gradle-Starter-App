@@ -10,6 +10,7 @@ import com.osiris.desku.ui.display.Text;
 import com.osiris.desku.ui.input.Button;
 import com.osiris.desku.ui.input.TextField;
 import com.osiris.desku.ui.layout.Horizontal;
+import com.osiris.desku.ui.layout.Popup;
 import com.osiris.desku.ui.layout.Vertical;
 import com.osiris.jlib.logger.AL;
 
@@ -45,18 +46,18 @@ public class Home extends Route {
         //
         // Existing image in the same folder as this class
         ly.add(
-                image(this.getClass(), "/images/desku_banner.png").width("100%")
+            image(this.getClass(), "/images/desku_banner.png").width("100%")
         );
         // In-memory created 1x1 black image
         ly.add(
-                image(new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB), "black.png")
-                        .width("100%").height("10vh")
+            image(new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB), "black.png")
+                .width("100%").height("10vh")
         );
 
         //
         // Events
         //
-        ly.add(text("Build Desktop Apps with Java/JS, HTML and CSS today! I am clickable text! Click me!").selfCenter().onClick(event -> {
+        ly.add(text("Build Desktop Apps with Java/JS, HTML and CSS today! I am clickable text! Click me!").selfCenter2().onClick(event -> {
             event.comp.setValue("Thank you for clicking!");
         }));
 
@@ -80,7 +81,7 @@ public class Home extends Route {
                 comp.add(txt);
                 Thread.sleep(10000);
                 txt.setValue("Finished after 10 seconds!");
-                comp.s("background", "#32a852");
+                comp.sty("background", "#32a852");
             } catch (Exception e) {
                 AL.warn(e);
             }
@@ -91,44 +92,44 @@ public class Home extends Route {
         //
         ly.add(text("Simple layouts and text").sizeXXL());
         ly.verticalCL()
-                .add(text("Vertical child layout. Items: "))
-                .add(text("XSmall").sizeXS())
-                .add(text("Small").sizeS())
-                .add(text("Medium").sizeM())
-                .add(text("Large").sizeL())
-                .add(text("XLarge").sizeXL())
-                .add(text("XLarge").sizeXL())
-                .add(text("XXLarge").sizeXXL())
-                .add(text("XXXLarge").sizeXXXL());
+            .add(text("Vertical child layout. Items: "))
+            .add(text("XSmall").sizeXS())
+            .add(text("Small").sizeS())
+            .add(text("Medium").sizeM())
+            .add(text("Large").sizeL())
+            .add(text("XLarge").sizeXL())
+            .add(text("XLarge").sizeXL())
+            .add(text("XXLarge").sizeXXL())
+            .add(text("XXXLarge").sizeXXXL());
 
         ly.horizontalCL()
-                .add(text("Horizontal child layout. Items: "))
-                .add(text("XSmall").sizeXS())
-                .add(text("Small").sizeS())
-                .add(text("Medium").sizeM())
-                .add(text("Large").sizeL())
-                .add(text("XLarge").sizeXL())
-                .add(text("XXLarge").sizeXXL())
-                .add(text("XXXLarge").sizeXXXL());
+            .add(text("Horizontal child layout. Items: "))
+            .add(text("XSmall").sizeXS())
+            .add(text("Small").sizeS())
+            .add(text("Medium").sizeM())
+            .add(text("Large").sizeL())
+            .add(text("XLarge").sizeXL())
+            .add(text("XXLarge").sizeXXL())
+            .add(text("XXXLarge").sizeXXXL());
         // Smart, mobile friendly layout
         ly.add(text("Smart, mobile friendly layout").sizeXXL());
         ly.add(smartlayout().add(
-                text("1").s("background-color", "var(--color-primary-50)"),
-                text("2").s("background-color", "var(--color-primary-50)"),
-                text("3").s("background-color", "var(--color-primary-50)"),
-                text("4").s("background-color", "var(--color-primary-50)"),
-                text("5").s("background-color", "var(--color-primary-50)")));
+            text("1").sty("background-color", "var(--color-primary-50)"),
+            text("2").sty("background-color", "var(--color-primary-50)"),
+            text("3").sty("background-color", "var(--color-primary-50)"),
+            text("4").sty("background-color", "var(--color-primary-50)"),
+            text("5").sty("background-color", "var(--color-primary-50)")));
         // Scroll layout
         ly.add(text("Scroll layout").sizeXXL());
         ly.add(
-                vertical().childGap(true).scrollable(true, "100%", "100px", // Size for scroll layout
-                        "100%", "5px") // Min sizes for children
-                        .onScroll(e -> {
-                            AL.info("SCROLL: "+e.rawJSMessage);
-                        })
+            vertical().childGap(true).scrollable(true, "100%", "100px", // Size for scroll layout
+                    "100%", "5px") // Min sizes for children
+                .onScroll(e -> {
+                    AL.info("SCROLL: "+e.rawJSMessage);
+                })
         );
         for (int i = 0; i < 20; i++) {
-            ly.lastChild().add(vertical().s("background-color", "gray"));
+            ly.lastChild().add(vertical().sty("background-color", "gray"));
         }
         // Page layout
         ly.add(text("Page layout").sizeXXL());
@@ -137,20 +138,20 @@ public class Home extends Route {
             data[i] = i;
         }
         ly.add(
-                pagelayout().childGap(true).setDataProvider(0, 3, (details) -> {
-                    List<Component<?,?>> comps = new ArrayList<>();
-                    for (int i = Math.max(details.iStart, 0); i < Math.min(details.iEnd, data.length - 1); i++) {
-                        comps.add(text("Index: "+data[i]).width("100%").s("background-color", "lightgray"));
-                    }
-                    try{Thread.sleep(1000);} catch (Exception e) {}
-                    return comps;
-                })
+            pagelayout().childGap(true).setDataProvider(0, 3, (details) -> {
+                List<Component<?,?>> comps = new ArrayList<>();
+                for (int i = Math.max(details.iStart, 0); i < Math.min(details.iEnd, data.length - 1); i++) {
+                    comps.add(text("Index: "+data[i]).width("100%").sty("background-color", "lightgray"));
+                }
+                try{Thread.sleep(1000);} catch (Exception e) {}
+                return comps;
+            })
         );
         // Tab layout
         ly.add(text("Tab layout").sizeXXL());
         ly.add(tablayout().addTabAndPage("First", text("First page content"))
-                .addTabAndPage("Second", text("Second page content"))
-                .addTabAndPage("Third", text("Third page content")));
+            .addTabAndPage("Second", text("Second page content"))
+            .addTabAndPage("Third", text("Third page content")));
 
         //
         // Navigate between routes
@@ -165,9 +166,15 @@ public class Home extends Route {
         //
         ly.add(text("Overlays").sizeXXL());
         ly.add(overlay(null).add(text("Overlay over the page")));
-        ly.verticalCL().s("background-color", "blue").size("100px", "100px").add(
-                overlay(ly.lastChild()).s("background-color", "red")
-                        .add(text("Overlay over another component.")));
+        ly.verticalCL().sty("background-color", "blue").size("100px", "100px").add(
+            overlay(ly.lastChild()).sty("background-color", "red")
+                .add(text("Overlay over another component.")));
+        ly.add(button("Show Popup").onClick(e -> {
+            var p = new Popup();
+            p.add(text("Hello from inside an popup!"));
+            ly.add(p);
+        }));
+        ly.add(button("Hover over me!").setTooltip("This is a tooltip!"));
 
         //
         // Inputs
@@ -175,26 +182,29 @@ public class Home extends Route {
         ly.add(text("Inputs").sizeXXL());
         AtomicInteger i = new AtomicInteger();
         ly.horizontalCL().childGap(true).width("100%")
-                .add(button("Click me!").grow(1).onClick(e -> {
-            String s = "Clicked " + i.incrementAndGet() + " times";
-            AL.info(s);
-            e.comp.label.setValue(s);
-        }), button("Click me!").grow(1).onClick(e -> {
-            String s = "Clicked " + i.incrementAndGet() + " times";
-            AL.info(s);
-            e.comp.label.setValue(s);
-        }), button("Click me!").grow(1).onClick(e -> {
-            String s = "Clicked " + i.incrementAndGet() + " times";
-            AL.info(s);
-            e.comp.label.setValue(s);
-        }));
+            .add(button("Click me!").grow(1).onClick(e -> {
+                String s = "Clicked " + i.incrementAndGet() + " times";
+                AL.info(s);
+                e.comp.label.setValue(s);
+            }), button("Click me!").grow(1).onClick(e -> {
+                String s = "Clicked " + i.incrementAndGet() + " times";
+                AL.info(s);
+                e.comp.label.setValue(s);
+            }), button("Click me!").grow(1).onClick(e -> {
+                String s = "Clicked " + i.incrementAndGet() + " times";
+                AL.info(s);
+                e.comp.label.setValue(s);
+            }));
         // Button variants
         ly.horizontalCL().childGap(true).add(button("Primary").primary(), button("Secondary").secondary(), button("Success").success(),
-                button("Danger").danger(), button("Warning").warning(), button("Info").info(),
-                button("Light").light(), button("Dark").dark());
+            button("Danger").danger(), button("Warning").warning(), button("Info").info(),
+            button("Light").light(), button("Dark").dark());
         // Fields
         ly.add(textfield("Text field label", "Def").onValueChange(e -> {
             AL.info("Input of textfield changed: "+e.value+" before: "+e.valueBefore);
+        }));
+        ly.add(textarea("Text area label", "Def").onValueChange(e -> {
+            AL.info("Input of textarea changed: "+e.value+" before: "+e.valueBefore);
         }));
         ly.add(passwordfield("Password field label").onValueChange(e -> {
             AL.info("Input of passwordfield changed: "+e.value+" before: "+e.valueBefore);
@@ -211,10 +221,10 @@ public class Home extends Route {
         // Option field
         // You can also add strings directly instead of components
         ly.add(optionfield("Option field label")
-                .add(text("Option 1"), text("Option 2"), text("Option 3"))
-                .onValueChange(e -> {
-            AL.info("Input of option field changed: "+e.value+" before: "+e.valueBefore);
-        }));
+            .add(text("Option 1"), text("Option 2"), text("Option 3"))
+            .onValueChange(e -> {
+                AL.info("Input of option field changed: "+e.value+" before: "+e.valueBefore);
+            }));
         // File uploader (probably only relevant if this a web server)
         ly.add(fileuploader("File uploader label").onValueChange(e -> {
             AL.info("Input of file uploader changed: "+e.value +" before: "+e.valueBefore);
@@ -235,8 +245,8 @@ public class Home extends Route {
         //
         ly.add(text("Tables").sizeXXL());
         ly.add(table().headers("Header 1", "Header 2")
-                .row("Data 1", "Data 2aaaaa")
-                .row("Data 3aa", "Data 4"));
+            .row("Data 1", "Data 2aaaaa")
+            .row("Data 3aa", "Data 4"));
 
         // Tables via reflection
         class Person {
@@ -265,11 +275,11 @@ public class Home extends Route {
         //
         ly.add(text("Loading animations").sizeXXL());
         ly.horizontalCL().childGap(true).add(spinner().primary(), spinner().secondary(), spinner().success(),
-                spinner().danger(), spinner().warning(), spinner().info(),
-                spinner().light(), spinner().dark());
+            spinner().danger(), spinner().warning(), spinner().info(),
+            spinner().light(), spinner().dark());
         ly.horizontalCL().childGap(true).add(spinner().typeGrow().primary(), spinner().typeGrow().secondary(), spinner().typeGrow().success(),
-                spinner().typeGrow().danger(), spinner().typeGrow().warning(), spinner().typeGrow().info(),
-                spinner().typeGrow().light(), spinner().typeGrow().dark());
+            spinner().typeGrow().danger(), spinner().typeGrow().warning(), spinner().typeGrow().info(),
+            spinner().typeGrow().light(), spinner().typeGrow().dark());
 
         //
         // Icons (fontawesome)
@@ -283,64 +293,64 @@ public class Home extends Route {
         // UI
         //
         ly.add(text("UI/Window").sizeXXL());
-        ly.horizontalCL().childSpaceEvenly().add(
-                checkbox("maximize").onValueChange(e -> {
-                    try{
-                        UI.get().maximize(e.value);
-                    } catch (Exception ex) {
-                        AL.warn(ex);
-                        e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
-                    }
-                }),
-                checkbox("minimize").onValueChange(e -> {
-                    try{
-                        UI.get().minimize(e.value);
-                    } catch (Exception ex) {
-                        AL.warn(ex);
-                        e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
-                    }
-                }),
-                checkbox("fullscreen").onValueChange(e -> {
-                    try{
-                        UI.get().fullscreen(e.value);
-                    } catch (Exception ex) {
-                        AL.warn(ex);
-                        e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
-                    }
-                }),
-                checkbox("decorate").onValueChange(e -> {
-                    try{
-                        UI.get().decorate(e.value);
-                    } catch (Exception ex) {
-                        AL.warn(ex);
-                        e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
-                    }
-                }),
-                checkbox("allwaysOnTop").onValueChange(e -> {
-                    try{
-                        UI.get().allwaysOnTop(e.value);
-                    } catch (Exception ex) {
-                        AL.warn(ex);
-                        e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
-                    }
-                }),
-                checkbox("focus").onValueChange(e -> {
-                    try{
-                        UI.get().focus(e.value);
-                    } catch (Exception ex) {
-                        AL.warn(ex);
-                        e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
-                    }
-                }),
-                checkbox("transparent background").onValueChange(e -> {
-                    try{
-                        if(e.value)UI.get().background("#00000000");
-                        else UI.get().background("#FFFFFFFF");
-                    } catch (Exception ex) {
-                        AL.warn(ex);
-                        e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
-                    }
-                })
+        ly.horizontalCL().childSpaceEvenly1().add(
+            checkbox("maximize").onValueChange(e -> {
+                try{
+                    UI.get().maximize(e.value);
+                } catch (Exception ex) {
+                    AL.warn(ex);
+                    e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
+                }
+            }),
+            checkbox("minimize").onValueChange(e -> {
+                try{
+                    UI.get().minimize(e.value);
+                } catch (Exception ex) {
+                    AL.warn(ex);
+                    e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
+                }
+            }),
+            checkbox("fullscreen").onValueChange(e -> {
+                try{
+                    UI.get().fullscreen(e.value);
+                } catch (Exception ex) {
+                    AL.warn(ex);
+                    e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
+                }
+            }),
+            checkbox("decorate").onValueChange(e -> {
+                try{
+                    UI.get().decorate(e.value);
+                } catch (Exception ex) {
+                    AL.warn(ex);
+                    e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
+                }
+            }),
+            checkbox("allwaysOnTop").onValueChange(e -> {
+                try{
+                    UI.get().allwaysOnTop(e.value);
+                } catch (Exception ex) {
+                    AL.warn(ex);
+                    e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
+                }
+            }),
+            checkbox("focus").onValueChange(e -> {
+                try{
+                    UI.get().focus(e.value);
+                } catch (Exception ex) {
+                    AL.warn(ex);
+                    e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
+                }
+            }),
+            checkbox("transparent background").onValueChange(e -> {
+                try{
+                    if(e.value)UI.get().background("#00000000");
+                    else UI.get().background("#FFFFFFFF");
+                } catch (Exception ex) {
+                    AL.warn(ex);
+                    e.comp.label.setValue("Failed, see log for details. "+ex.getMessage());
+                }
+            })
         );
 
         //
@@ -361,9 +371,9 @@ public class Home extends Route {
         });
 
         ly.add(
-                numElements,
-                btnAddElements,
-                lyElements
+            numElements,
+            btnAddElements,
+            lyElements
         );
 
         return ly;
