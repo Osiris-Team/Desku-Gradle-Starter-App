@@ -3,7 +3,7 @@ package com.author.web;
 import com.osiris.desku.App;
 import com.osiris.desku.ui.DesktopUIManager;
 
-public class Main {
+public class WebLauncher {
 
     public static void main(String[] args) {
         try {
