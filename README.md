@@ -1,6 +1,12 @@
 # Desku-Gradle-Starter-App
 Example starter [Desku](https://github.com/Osiris-Team/Desku) app, built with Gradle.
 
+## ‼️ Good to know
+- Renaming folders: Use your IDEs' safe refactoring while renaming a folder,
+meaning tick a box that says "check for usages" and ensure the path is updated in those usages too!
+- ./settings.gradle contains a dependency checker/enforcer plugin that fails your build to ensure, that if there are multiple versions
+of the same dependency the correct dependency is picked (see `rule(enforcer.rules.ForceDependencies)`).
+
 ## Release
 `.github/workflows/release.yml` (partially working): creates a release, generates and uploads
 all supported, platform-specific installers and binaries. Head over to the 'Actions' tab,
@@ -13,9 +19,6 @@ is shared by all platforms.**
 
 If you don't want to use a platform below you can simply delete its directory
 and remove the module name from ./settings.gradle file.
-
-‼️ Renaming folders: Use your IDEs' safe refactoring while renaming a folder,
-meaning tick a box that says "check for usages" and ensure the path is updated in those usages too!
 
 ## Desktop (Windows/Linux/Mac)
 `com.author.desktop`: uses [Swing](https://de.wikipedia.org/wiki/Swing_(Java)) and [WebView](https://github.com/webview/webview_java). 
