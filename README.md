@@ -14,6 +14,9 @@ is shared by all platforms.**
 If you don't want to use a platform below you can simply delete its directory
 and remove the module name from ./settings.gradle file.
 
+‼️ Renaming folders: Use your IDEs' safe refactoring while renaming a folder,
+meaning tick a box that says "check for usages" and ensure the path is updated in those usages too!
+
 ## Desktop (Windows/Linux/Mac)
 `com.author.desktop`: uses [Swing](https://de.wikipedia.org/wiki/Swing_(Java)) and [WebView](https://github.com/webview/webview_java). 
 Its `build.gradle` file generates Windows/Linux/Mac installers with the help of [JavaPackager](https://github.com/fvarrui/JavaPackager).
