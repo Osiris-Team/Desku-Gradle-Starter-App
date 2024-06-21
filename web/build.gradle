@@ -27,7 +27,6 @@ repositories {
 sourceSets.main.resources.srcDirs += [ rootProject.file('assets').path ]
 //mainClassName = 'com.author.web.Main'
 eclipse.project.name = appName + '-web'
-sourceCompatibility = 1.8
 
 dependencies {
   implementation project(':core')
@@ -36,7 +35,6 @@ dependencies {
 group = 'com.author.web'
 version = '1.0.0'
 description = 'Desku example app.'
-sourceCompatibility = '1.17' // Desku is compatible with 1.8 or higher
 compileJava.options.encoding = 'UTF-8'
 
 jar {
