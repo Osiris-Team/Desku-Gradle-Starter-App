@@ -6,6 +6,7 @@ Example starter [Desku](https://github.com/Osiris-Team/Desku) app, built with Gr
 meaning tick a box that says "check for usages" and ensure the path is updated in those usages too!
 - ./settings.gradle contains a dependency checker/enforcer plugin that fails your build to ensure, that if there are multiple versions
 of the same dependency the correct dependency is picked (see `rule(enforcer.rules.ForceDependencies)`).
+- Dependencies should be directly added to the `build.gradle` file in each sub-project/sub-module.
 
 ## Release
 `.github/workflows/release.yml` (partially working): creates a release, generates and uploads
