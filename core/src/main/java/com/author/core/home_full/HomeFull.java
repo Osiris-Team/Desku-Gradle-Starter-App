@@ -1,4 +1,4 @@
-package com.author.core.home;
+package com.author.core.home_full;
 
 import com.author.core.about.About;
 import com.osiris.desku.App;
@@ -23,17 +23,17 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import static com.osiris.desku.Statics.*;
 
-public class Home extends Route {
+public class HomeFull extends Route {
     static {
         try {
-            App.appendToGlobalCSS(App.getCSS(Home.class));
-            App.appendToGlobalJS(App.getJS(Home.class));
+            App.appendToGlobalCSS(App.getCSS(HomeFull.class));
+            App.appendToGlobalJS(App.getJS(HomeFull.class));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public Home() {
+    public HomeFull() {
         super("/");
     }
 
@@ -364,7 +364,7 @@ public class Home extends Route {
             ms.set(System.currentTimeMillis());
             int size = Integer.parseInt(numElements.getValue());
             for (int i1 = 0; i1 < size; i1++) {
-                lyElements.add(image(Home.class,"/images/desku_banner.png"));
+                lyElements.add(image(HomeFull.class,"/images/desku_banner.png"));
             }
             long msTook = System.currentTimeMillis() - ms.get();
             e.comp.label.setValue("Click to add elements below (took "+msTook+"ms, total elements: "+lyElements.children.size()+")");
