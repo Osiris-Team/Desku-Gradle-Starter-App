@@ -12,8 +12,8 @@ public class Main {
     public static HomeMinimal homeMinimal = new HomeMinimal();
 
     public static void main(String[] args) {
-        // App.init(...) is done in each platform-specific repo, before calling this main method,
-        // with the platform-specific implementations of UI and UIManager.
+        App.name = "My-Example-Desku-App";
+        App.init();
 
         try {
             //App.uis.create(homeFull);

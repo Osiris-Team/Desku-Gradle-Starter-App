@@ -7,8 +7,7 @@ public class DesktopLauncher {
 
     public static void main(String[] args) {
         try {
-            App.LoggerParams loggerParams = new App.LoggerParams();
-            App.init(new DesktopUIManager(), loggerParams);
+            App.uis = new DesktopUIManager();
             com.author.core.Main.main(args);
         } catch (Exception e) {
             throw new RuntimeException(e);
