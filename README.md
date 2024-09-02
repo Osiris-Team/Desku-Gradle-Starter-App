@@ -1,5 +1,5 @@
 # Desku-Starter-App
-Example starter [Desku](https://github.com/Osiris-Team/Desku) app, built with Gradle.
+Example starter [Desku](https://github.com/Osiris-Team/Desku) app, built with 1JPM.
 
 ## ‼️ Good to know
 Renaming folders: Use your IDEs' safe refactoring while renaming a folder,
