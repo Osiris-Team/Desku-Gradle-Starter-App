@@ -9,8 +9,8 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java//JP
 
 --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.author.core</groupId>
-    <artifactId>core</artifactId>
+    <groupId>com.author.shared</groupId>
+    <artifactId>shared</artifactId>
     <version>1.0.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,7 +25,7 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java//JP
         <dependency>
             <groupId>com.github.Osiris-Team</groupId>
             <artifactId>Desku</artifactId>
-            <version>1.0.32</version>
+            <version>1.2.1</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -56,38 +56,12 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java//JP
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.author.core.MyMainClass</mainClass>
+                            <mainClass>com.author.shared.MyMainClass</mainClass>
                             <addClasspath>true</addClasspath>
                         </manifest>
                     </archive>
-                    <finalName>core-without-dependencies</finalName>
+                    <finalName>shared</finalName>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.author.core.MyMainClass</mainClass>
-                        </manifest>
-                    </archive>
-                    <finalName>core</finalName>
-                    <appendAssemblyId>false</appendAssemblyId>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>make-assembly</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

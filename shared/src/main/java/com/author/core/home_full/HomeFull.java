@@ -1,6 +1,6 @@
-package com.author.core.home_full;
+package com.author.shared.home_full;
 
-import com.author.core.about.About;
+import com.author.shared.about.About;
 import com.osiris.desku.App;
 import com.osiris.desku.Icon;
 import com.osiris.desku.Route;

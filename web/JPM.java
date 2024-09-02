@@ -43,7 +43,7 @@ public class JPM {
             //forceImplementation("org.apache.commons:commons-lang3:3.12.0");
 
             // Add dependencies
-            implementation("com.author.core:core:"+$("version"));
+            implementation("com.author.shared:shared:"+$("version"));
 
             // Execute build
             if(args != null){

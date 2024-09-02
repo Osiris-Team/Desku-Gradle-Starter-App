@@ -40,7 +40,7 @@ public class JPM {
             this.javaVersionTarget = $("javaVersion");
 
             // Add dependencies
-            implementation("com.author.core:core:"+$("version"));
+            implementation("com.author.shared:shared:"+$("version"));
             implementation("com.mobidevelop.robovm:robovm-cocoatouch:"+$("robovmVersion"))
             implementation("com.mobidevelop.robovm:robovm-rt:"+$("robovmVersion"));
 

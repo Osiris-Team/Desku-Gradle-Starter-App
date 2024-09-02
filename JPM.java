@@ -29,6 +29,12 @@ import java.nio.charset.Charset;
 
 
 
+
+
+
+
+
+
 public class JPM {
     public static class ThisProject extends JPM.Project {
         public ThisProject() throws Exception {
@@ -42,6 +48,7 @@ public class JPM {
             this.mainClass = groupId+".MyMainClass";
             this.jarName = artifactId+".jar";
             this.fatJarName = artifactId+"-with-dependencies.jar";
+            JPM.plugins.remove(AssemblyPlugin.get);
 
             addRepository("https://s01.oss.sonatype.org");
             addRepository("https://maven.google.com/");
@@ -50,8 +57,8 @@ public class JPM {
             addRepository("https://jitpack.io");
 
             // If there are duplicate dependencies with different versions force a specific version like so:
-            forceImplementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.10");
-            forceImplementation("org.jetbrains:annotations:24.0.1:compile");
+            forceImplementation("com.github.Osiris-Team:jlib:18.8");
+            forceImplementation("org.slf4j:slf4j-api:1.7.36");
 
             // Add dependencies
 
@@ -91,8 +98,10 @@ public class JPM {
 
 
 
-    
-// 1JPM version 3.3.5 by Osiris-Team: https://github.com/Osiris-Team/1JPM
+
+
+
+// 1JPM version 3.3.7 by Osiris-Team: https://github.com/Osiris-Team/1JPM
     // Do not edit anything below, since changes will be lost due to auto-updating.
     // You can also do this manually, by replacing everything below with its newer version and updating the imports.
     public static final List<Plugin> plugins = new ArrayList<>();
@@ -469,9 +478,13 @@ public class JPM {
         }
     }
 
-    private static void execJavaJpmJava(File childProjectDir) throws IOException, InterruptedException {
+    private static void execJavaJpmJava(File childProjectDir, String... additionalArgs) throws IOException, InterruptedException {
         ProcessBuilder p = new ProcessBuilder();
-        p.command("java", "JPM.java");
+        List<String> list = new ArrayList<>();
+        list.add("java");
+        list.add("JPM.java");
+        if(additionalArgs != null && additionalArgs.length > 0) list.addAll(Arrays.asList(additionalArgs));
+        p.command(list);
         p.inheritIO();
         p.directory(childProjectDir);
         System.out.println("Executing in child project '"+ childProjectDir.getName()+"': java JPM.java");
@@ -1041,9 +1054,13 @@ public class JPM {
                 return execution;
             }
 
-            public Details addDependency(Dependency dependency) {
+            public Dependency implementation(String s){
+                return addDependency(Dependency.fromGradleString(project, s));
+            }
+
+            public Dependency addDependency(Dependency dependency) {
                 dependencies.add(dependency);
-                return this;
+                return dependency;
             }
         }
     }
@@ -1271,7 +1288,7 @@ public class JPM {
         }
 
         /**
-         * Writes the pom.xml file (see {@link #toXML()}) and also updates/re-generates parent/child poms. <br>
+         * Writes the pom.xml file (see {@link #toXML()}). It DOES NOT update/re-generate parent/child poms, thus you must make sure they are always in sync with their JPM.java files. <br>
          * For any dependency that has localProjectPath set, it will try to update its pom and also run "maven install",
          * so that the dependency is built and ready to use in this project. <br>
          * @throws IOException
@@ -1288,8 +1305,8 @@ public class JPM {
 
             // If isAutoParentsAndChildren is true, handle parents and children automatically
             if (isAutoParentsAndChildren) {
-                updateParentsPoms(pom);
-                updateChildrenPoms();
+                appendParentInfo(pom);
+                appendParentInfoToChildren();
             }
 
             Path cwd = Paths.get(System.getProperty("user.dir"));
@@ -1311,11 +1328,11 @@ public class JPM {
             }
         }
 
-        protected void updateParentsPoms(XML currentPom) throws IOException {
-            updateParentsPoms(currentPom, new File(System.getProperty("user.dir")), null);
+        protected void appendParentInfo(XML currentPom) throws IOException {
+            appendParentInfo(currentPom, new File(System.getProperty("user.dir")), null);
         }
 
-        protected void updateParentsPoms(XML currentPom, File currentDir, File forceStopAtDir) throws IOException {
+        protected void appendParentInfo(XML currentPom, File currentDir, File forceStopAtDir) throws IOException {
             if(currentDir == null){
                 System.out.println("Force end probably at disk root, because currentDir is null.");
                 return;
@@ -1331,6 +1348,11 @@ public class JPM {
 
                 parentPom = new File(parentDir, "pom.xml");
                 if (parentPom.exists()) {
+                    // Regen parent
+                    // We cannot do this since it causes an infinite loop, the user must ensure the parent pom is the latest
+                    //execJavaJpmJava(parentDir, "skipMaven"); // Only sync, no build);
+
+
                     // Load and update parent pom.xml
                     System.out.println("Subproject '"+currentDir.getName()+"', found parent pom.xml at: " + parentPom.getAbsolutePath());
                     XML parent = new XML(parentPom);
@@ -1366,16 +1388,16 @@ public class JPM {
             }
         }
 
-        protected void updateChildrenPoms() throws IOException {
+        protected void appendParentInfoToChildren() throws IOException {
             File currentDir = new File(System.getProperty("user.dir"));
-            updateChildrenPoms(currentDir);
+            appendParentInfoToChildren(currentDir);
         }
 
         /**
          * @param currentDir assume that this contains a pom.xml file that already was updated,
          *                  now we want to check its sub-dirs for child projects.
          */
-        protected void updateChildrenPoms(File currentDir) throws IOException {
+        protected void appendParentInfoToChildren(File currentDir) throws IOException {
             List<File> poms = new ArrayList<>();
             File[] subDirs = currentDir.listFiles(File::isDirectory);
             if(subDirs != null)
@@ -1409,7 +1431,7 @@ public class JPM {
 
                 // Update current child pom and all parent poms.
                 XML pom = new XML(childPom);
-                updateParentsPoms(pom, childPom.getParentFile(), forceStopAtDir);
+                appendParentInfo(pom, childPom.getParentFile(), forceStopAtDir);
 
                 // Update visited list
                 File folder = childPom.getParentFile();
@@ -1563,7 +1585,7 @@ public class JPM {
     public static class EnforcerPlugin extends Plugin {
         public static EnforcerPlugin get = new EnforcerPlugin();
         public EnforcerPlugin() {
-            super("org.apache.maven.plugins", "maven-enforcer-plugin", "3.3.0");
+            super("org.apache.maven.plugins", "maven-enforcer-plugin", "3.5.0");
             onBeforeToXML(d -> {
                 d.addExecution("enforce", null)
                         .addGoal("enforce")
@@ -1648,7 +1670,7 @@ public class JPM {
          * Automatically configures plugin options using project defaults where available.
          */
         public PackagerPlugin() {
-            super("io.github.fvarrui", "javapackager", "latest-version-here");
+            super("io.github.fvarrui", "javapackager", "1.7.6");
             onBeforeToXML(d -> {
                 // Use project defaults where applicable
                 if (mainClass != null && !mainClass.isEmpty()) {

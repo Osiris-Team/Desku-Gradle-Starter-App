@@ -1,4 +1,4 @@
-package com.author.core.home_minimal;
+package com.author.shared.home_minimal;
 
 import com.osiris.desku.App;
 import com.osiris.desku.Route;

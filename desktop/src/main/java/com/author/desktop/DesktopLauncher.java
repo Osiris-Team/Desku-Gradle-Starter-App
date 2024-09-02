@@ -8,7 +8,7 @@ public class DesktopLauncher {
     public static void main(String[] args) {
         try {
             App.uis = new DesktopUIManager();
-            com.author.core.Main.main(args);
+            com.author.shared.Main.main(args);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

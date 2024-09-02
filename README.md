@@ -14,7 +14,7 @@ select 'release' and press on 'Run Workflow' to execute it.
 
 To build execute: `cd core && java JPM.java`
 
-**`com.author.core`: the place where you will
+**`com.author.shared`: the place where you will
 develop your application with Desku. It contains the UI and application logic that
 is shared by all platforms.**
 

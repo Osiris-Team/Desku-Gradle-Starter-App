@@ -1,8 +1,8 @@
-package com.author.core;
+package com.author.shared;
 
-import com.author.core.about.About;
-import com.author.core.home_full.HomeFull;
-import com.author.core.home_minimal.HomeMinimal;
+import com.author.shared.about.About;
+import com.author.shared.home_full.HomeFull;
+import com.author.shared.home_minimal.HomeMinimal;
 import com.osiris.desku.App;
 
 public class Main {

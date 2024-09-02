@@ -1,4 +1,4 @@
-package com.author.core.about;
+package com.author.shared.about;
 
 import com.osiris.desku.Route;
 import com.osiris.desku.ui.Component;

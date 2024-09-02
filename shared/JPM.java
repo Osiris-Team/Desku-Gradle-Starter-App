@@ -1,25 +1,30 @@
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.*;
-import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.function.Consumer;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.w3c.dom.Element;
+import java.net.HttpURLConnection;
+import java.nio.file.*;
+import java.net.URI;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import javax.xml.parsers.ParserConfigurationException;
+import org.xml.sax.SAXException;
+import java.util.function.Consumer;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.nio.charset.StandardCharsets;
+import java.util.regex.Matcher;
+import java.util.*;
+import org.w3c.dom.NodeList;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.io.*;
+import java.nio.charset.Charset;
+
+
+
+
+
+
 
 public class JPM {
     public static class ThisProject extends JPM.Project {
@@ -28,12 +33,13 @@ public class JPM {
         }
         public ThisProject(List<String> args) throws Exception {
             // Override default configurations
-            this.groupId = "com.author.core";
-            this.artifactId = "core";
+            this.groupId = "com.author.shared";
+            this.artifactId = "shared";
             this.version = $("version");
             this.mainClass = groupId+".MyMainClass";
-            this.jarName = artifactId+"-without-dependencies.jar";
-            this.fatJarName = artifactId+".jar";
+            this.jarName = artifactId+".jar";
+            this.fatJarName = artifactId+"-with-dependencies.jar";
+            JPM.plugins.remove(AssemblyPlugin.get);
             this.javaVersionSource = $("javaVersion");
             this.javaVersionTarget = $("javaVersion");
 
@@ -83,7 +89,9 @@ public class JPM {
 
 
 
-    // 1JPM version 3.3.5 by Osiris-Team: https://github.com/Osiris-Team/1JPM
+
+
+// 1JPM version 3.3.7 by Osiris-Team: https://github.com/Osiris-Team/1JPM
     // Do not edit anything below, since changes will be lost due to auto-updating.
     // You can also do this manually, by replacing everything below with its newer version and updating the imports.
     public static final List<Plugin> plugins = new ArrayList<>();
@@ -446,7 +454,7 @@ public class JPM {
                 jpmFile.getParentFile().mkdirs();
                 String jpmJavaContent = contentToString(url);
                 jpmJavaContent = jpmJavaContent.replace(".myproject", "."+childProjectDir.getName())
-                    .replace("my-project", childProjectDir.getName());
+                        .replace("my-project", childProjectDir.getName());
                 Files.write(jpmFile.toPath(), jpmJavaContent.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
                 System.out.println("Created JPM.java file for child project '"+childProjectDir.getName()+"'.");
 
@@ -460,9 +468,13 @@ public class JPM {
         }
     }
 
-    private static void execJavaJpmJava(File childProjectDir) throws IOException, InterruptedException {
+    private static void execJavaJpmJava(File childProjectDir, String... additionalArgs) throws IOException, InterruptedException {
         ProcessBuilder p = new ProcessBuilder();
-        p.command("java", "JPM.java");
+        List<String> list = new ArrayList<>();
+        list.add("java");
+        list.add("JPM.java");
+        if(additionalArgs != null && additionalArgs.length > 0) list.addAll(Arrays.asList(additionalArgs));
+        p.command(list);
         p.inheritIO();
         p.directory(childProjectDir);
         System.out.println("Executing in child project '"+ childProjectDir.getName()+"': java JPM.java");
@@ -601,7 +613,7 @@ public class JPM {
                 System.out.println("Latest versions for " + groupId + ":" + artifactId + " across repositories:");
                 for (Map.Entry<String, String> entry : latestVersions.entrySet()) {
                     System.out.println("  - " + entry.getKey() + ": " + entry.getValue() +
-                        (entry.getValue().contains("SNAPSHOT") ? " (SNAPSHOT)" : ""));
+                            (entry.getValue().contains("SNAPSHOT") ? " (SNAPSHOT)" : ""));
                 }
             } else {
                 System.out.println("No versions found for " + groupId + ":" + artifactId + " in any repository");
@@ -699,9 +711,9 @@ public class JPM {
             if (o == null || getClass() != o.getClass()) return false;
             Dependency that = (Dependency) o;
             return Objects.equals(groupId, that.groupId) &&
-                Objects.equals(artifactId, that.artifactId) &&
-                Objects.equals(version, that.version) &&
-                Objects.equals(scope, that.scope);
+                    Objects.equals(artifactId, that.artifactId) &&
+                    Objects.equals(version, that.version) &&
+                    Objects.equals(scope, that.scope);
         }
 
         @Override
@@ -1206,11 +1218,11 @@ public class JPM {
             XML xml = new XML("project");
             String jpmPackagePath = "/"+this.getClass().getPackage().getName().replace(".", "/");
             xml.putComment("", "\n\n\n\nAUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java"+
-                jpmPackagePath+"/JPM.java\n\n\n\n");
+                    jpmPackagePath+"/JPM.java\n\n\n\n");
             xml.putAttributes("",
-                "xmlns", "http://maven.apache.org/POM/4.0.0",
-                "xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance",
-                "xsi:schemaLocation", "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+                    "xmlns", "http://maven.apache.org/POM/4.0.0",
+                    "xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance",
+                    "xsi:schemaLocation", "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
             );
 
             // Add <modelVersion> element
@@ -1262,7 +1274,7 @@ public class JPM {
         }
 
         /**
-         * Writes the pom.xml file (see {@link #toXML()}) and also updates/re-generates parent/child poms. <br>
+         * Writes the pom.xml file (see {@link #toXML()}). It DOES NOT update/re-generate parent/child poms, thus you must make sure they are always in sync with their JPM.java files. <br>
          * For any dependency that has localProjectPath set, it will try to update its pom and also run "maven install",
          * so that the dependency is built and ready to use in this project. <br>
          * @throws IOException
@@ -1279,8 +1291,8 @@ public class JPM {
 
             // If isAutoParentsAndChildren is true, handle parents and children automatically
             if (isAutoParentsAndChildren) {
-                updateParentsPoms(pom);
-                updateChildrenPoms();
+                appendParentInfo(pom);
+                appendParentInfoToChildren();
             }
 
             Path cwd = Paths.get(System.getProperty("user.dir"));
@@ -1302,11 +1314,11 @@ public class JPM {
             }
         }
 
-        protected void updateParentsPoms(XML currentPom) throws IOException {
-            updateParentsPoms(currentPom, new File(System.getProperty("user.dir")), null);
+        protected void appendParentInfo(XML currentPom) throws IOException {
+            appendParentInfo(currentPom, new File(System.getProperty("user.dir")), null);
         }
 
-        protected void updateParentsPoms(XML currentPom, File currentDir, File forceStopAtDir) throws IOException {
+        protected void appendParentInfo(XML currentPom, File currentDir, File forceStopAtDir) throws IOException {
             if(currentDir == null){
                 System.out.println("Force end probably at disk root, because currentDir is null.");
                 return;
@@ -1322,6 +1334,11 @@ public class JPM {
 
                 parentPom = new File(parentDir, "pom.xml");
                 if (parentPom.exists()) {
+                    // Regen parent
+                    // We cannot do this since it causes an infinite loop, the user must ensure the parent pom is the latest
+                    //execJavaJpmJava(parentDir, "skipMaven"); // Only sync, no build);
+
+
                     // Load and update parent pom.xml
                     System.out.println("Subproject '"+currentDir.getName()+"', found parent pom.xml at: " + parentPom.getAbsolutePath());
                     XML parent = new XML(parentPom);
@@ -1357,16 +1374,16 @@ public class JPM {
             }
         }
 
-        protected void updateChildrenPoms() throws IOException {
+        protected void appendParentInfoToChildren() throws IOException {
             File currentDir = new File(System.getProperty("user.dir"));
-            updateChildrenPoms(currentDir);
+            appendParentInfoToChildren(currentDir);
         }
 
         /**
          * @param currentDir assume that this contains a pom.xml file that already was updated,
          *                  now we want to check its sub-dirs for child projects.
          */
-        protected void updateChildrenPoms(File currentDir) throws IOException {
+        protected void appendParentInfoToChildren(File currentDir) throws IOException {
             List<File> poms = new ArrayList<>();
             File[] subDirs = currentDir.listFiles(File::isDirectory);
             if(subDirs != null)
@@ -1400,7 +1417,7 @@ public class JPM {
 
                 // Update current child pom and all parent poms.
                 XML pom = new XML(childPom);
-                updateParentsPoms(pom, childPom.getParentFile(), forceStopAtDir);
+                appendParentInfo(pom, childPom.getParentFile(), forceStopAtDir);
 
                 // Update visited list
                 File folder = childPom.getParentFile();
@@ -1512,7 +1529,7 @@ public class JPM {
                 d.putConfiguration("appendAssemblyId", "false");
 
                 d.addExecution("make-assembly", "package")
-                    .addGoal("single");
+                        .addGoal("single");
             });
         }
     }
@@ -1526,7 +1543,7 @@ public class JPM {
             super("org.apache.maven.plugins", "maven-source-plugin", "3.2.1");
             onBeforeToXML(d -> {
                 d.addExecution("attach-sources", null)
-                    .addGoal("jar");
+                        .addGoal("jar");
             });
         }
     }
@@ -1540,10 +1557,10 @@ public class JPM {
             super("org.apache.maven.plugins", "maven-javadoc-plugin", "3.0.0");
             onBeforeToXML(d -> {
                 d.addExecution("resource-bundles", "package")
-                    .addGoal("resource-bundle")
-                    .addGoal("test-resource-bundle")
-                    .putConfiguration("doclint", "none")
-                    .putConfiguration("detectOfflineLinks", "false");
+                        .addGoal("resource-bundle")
+                        .addGoal("test-resource-bundle")
+                        .putConfiguration("doclint", "none")
+                        .putConfiguration("detectOfflineLinks", "false");
             });
         }
     }
@@ -1557,8 +1574,8 @@ public class JPM {
             super("org.apache.maven.plugins", "maven-enforcer-plugin", "3.3.0");
             onBeforeToXML(d -> {
                 d.addExecution("enforce", null)
-                    .addGoal("enforce")
-                    .putConfiguration("rules dependencyConvergence", "");
+                        .addGoal("enforce")
+                        .putConfiguration("rules dependencyConvergence", "");
             });
         }
     }
@@ -1639,7 +1656,7 @@ public class JPM {
          * Automatically configures plugin options using project defaults where available.
          */
         public PackagerPlugin() {
-            super("io.github.fvarrui", "javapackager", "latest-version-here");
+            super("io.github.fvarrui", "javapackager", "1.7.6");
             onBeforeToXML(d -> {
                 // Use project defaults where applicable
                 if (mainClass != null && !mainClass.isEmpty()) {
@@ -2041,4 +2058,3 @@ public class JPM {
         }
     }
 }
-

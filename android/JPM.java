@@ -46,7 +46,7 @@ public class JPM {
             this.javaVersionTarget = $("javaVersion");
 
             // Add dependencies
-            implementation("com.author.core:core:"+$("version"));
+            implementation("com.author.shared:shared:"+$("version"));
             implementation("com.android.tools.build:gradle:7.0.2")
             implementation("com.android.tools:desugar_jdk_libs:1.2.2");
 

@@ -23,8 +23,8 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java//JP
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>com.author.core</groupId>
-            <artifactId>core</artifactId>
+            <groupId>com.author.shared</groupId>
+            <artifactId>shared</artifactId>
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
@@ -127,6 +127,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java//JP
                                 <dependencyConvergence/>
                             </rules>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>io.github.fvarrui</groupId>
+                <artifactId>javapackager</artifactId>
+                <version>1.7.6</version>
+                <configuration>
+                    <mainClass>com.author.desktop.DesktopLauncher</mainClass>
+                    <bundleJre>true</bundleJre>
+                    <name>desktop</name>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>

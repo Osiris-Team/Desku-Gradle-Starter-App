@@ -8,7 +8,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
 
 
 --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -18,7 +35,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <modelVersion>4.0.0</modelVersion>
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -28,7 +62,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <groupId>com.author.ios</groupId>
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -38,7 +89,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <artifactId>ios</artifactId>
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -48,7 +116,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <version>1.0.0</version>
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -58,7 +143,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <properties>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -68,7 +170,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                                                                            
+                                                                                                                                                                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -78,7 +197,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     </properties>
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -88,7 +224,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <repositories>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -98,7 +251,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <repository>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -108,7 +278,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <id>repomavenapacheorg</id>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -118,7 +305,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <url>https://repo.maven.apache.org/maven2</url>
-                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -128,7 +332,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         </repository>
-                                                                            
+                                                                                                                                                                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -138,7 +359,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     </repositories>
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -148,7 +386,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <dependencies>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -158,7 +413,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <dependency>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -168,7 +440,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <groupId>org.apache.commons</groupId>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -178,7 +467,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <artifactId>commons-lang3</artifactId>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -188,7 +494,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <version>3.12.0</version>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -198,7 +521,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <scope>compile</scope>
-                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -208,7 +548,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         </dependency>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -218,7 +575,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <dependency>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -228,7 +602,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <groupId>org.junit.jupiter</groupId>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -238,7 +629,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <artifactId>junit-jupiter-api</artifactId>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -248,7 +656,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <version>5.10.3</version>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -258,7 +683,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <scope>test</scope>
-                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -268,7 +710,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         </dependency>
-                                                                            
+                                                                                                                                                                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -278,7 +737,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     </dependencies>
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -288,7 +764,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <build>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -298,7 +791,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <plugins>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -308,7 +818,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <plugin>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -318,7 +845,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <groupId>org.apache.maven.plugins</groupId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -328,7 +872,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <artifactId>maven-compiler-plugin</artifactId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -338,7 +899,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <version>3.8.1</version>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -348,7 +926,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <configuration>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -358,7 +953,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <compilerArgs>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -368,7 +980,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <arg>-Xlint:deprecation</arg>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -378,7 +1007,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     </compilerArgs>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -388,7 +1034,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <source>8</source>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -398,7 +1061,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <target>8</target>
-                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -408,7 +1088,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 </configuration>
-                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -418,7 +1115,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             </plugin>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -428,7 +1142,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <plugin>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -438,7 +1169,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <groupId>org.apache.maven.plugins</groupId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -448,7 +1196,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <artifactId>maven-jar-plugin</artifactId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -458,7 +1223,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <version>3.2.0</version>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -468,7 +1250,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <configuration>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -478,7 +1277,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <archive>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -488,7 +1304,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <manifest>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -498,7 +1331,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <mainClass>com.author.ios.MyMainClass</mainClass>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -508,7 +1358,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <addClasspath>true</addClasspath>
-                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -518,7 +1385,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         </manifest>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -528,7 +1412,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     </archive>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -538,7 +1439,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <finalName>ios</finalName>
-                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -548,7 +1466,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 </configuration>
-                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -558,7 +1493,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             </plugin>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -568,7 +1520,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <plugin>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -578,7 +1547,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <groupId>org.apache.maven.plugins</groupId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -588,7 +1574,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <artifactId>maven-assembly-plugin</artifactId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -598,7 +1601,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <version>3.3.0</version>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -608,7 +1628,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <configuration>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -618,7 +1655,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <descriptorRefs>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -628,7 +1682,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <descriptorRef>jar-with-dependencies</descriptorRef>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -638,7 +1709,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     </descriptorRefs>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -648,7 +1736,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <archive>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -658,7 +1763,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <manifest>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -668,7 +1790,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <mainClass>com.author.ios.MyMainClass</mainClass>
-                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -678,7 +1817,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         </manifest>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -688,7 +1844,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     </archive>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -698,7 +1871,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <finalName>ios-with-dependencies</finalName>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -708,7 +1898,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <appendAssemblyId>false</appendAssemblyId>
-                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -718,7 +1925,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 </configuration>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -728,7 +1952,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <executions>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -738,7 +1979,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <execution>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -748,7 +2006,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <id>make-assembly</id>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -758,7 +2033,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <phase>package</phase>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -768,7 +2060,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <goals>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -778,7 +2087,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <goal>single</goal>
-                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -788,7 +2114,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         </goals>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -798,7 +2141,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     </execution>
-                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -808,7 +2168,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 </executions>
-                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -818,7 +2195,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             </plugin>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -828,7 +2222,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <plugin>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -838,7 +2249,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <groupId>org.apache.maven.plugins</groupId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -848,7 +2276,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <artifactId>maven-source-plugin</artifactId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -858,7 +2303,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <version>3.2.1</version>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -868,7 +2330,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <executions>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -878,7 +2357,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <execution>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -888,7 +2384,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <id>attach-sources</id>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -898,7 +2411,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <goals>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -908,7 +2438,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <goal>jar</goal>
-                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -918,7 +2465,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         </goals>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -928,7 +2492,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     </execution>
-                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -938,7 +2519,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 </executions>
-                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -948,7 +2546,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             </plugin>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -958,7 +2573,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <plugin>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -968,7 +2600,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <groupId>org.apache.maven.plugins</groupId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -978,7 +2627,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <artifactId>maven-javadoc-plugin</artifactId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -988,7 +2654,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <version>3.0.0</version>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -998,7 +2681,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <executions>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -1008,7 +2708,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <execution>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1018,7 +2735,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <id>resource-bundles</id>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1028,7 +2762,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <phase>package</phase>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1038,7 +2789,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <goals>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -1048,7 +2816,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <goal>resource-bundle</goal>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -1058,7 +2843,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <goal>test-resource-bundle</goal>
-                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1068,7 +2870,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         </goals>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1078,7 +2897,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <configuration>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -1088,7 +2924,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <doclint>none</doclint>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -1098,7 +2951,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <detectOfflineLinks>false</detectOfflineLinks>
-                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1108,7 +2978,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         </configuration>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -1118,7 +3005,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     </execution>
-                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1128,7 +3032,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 </executions>
-                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -1138,7 +3059,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             </plugin>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -1148,7 +3086,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <plugin>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1158,7 +3113,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <groupId>org.apache.maven.plugins</groupId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1168,7 +3140,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <artifactId>maven-enforcer-plugin</artifactId>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1178,7 +3167,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <version>3.3.0</version>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1188,7 +3194,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <executions>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -1198,7 +3221,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     <execution>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1208,7 +3248,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <id>enforce</id>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1218,7 +3275,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <goals>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -1228,7 +3302,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <goal>enforce</goal>
-                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1238,7 +3329,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         </goals>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1248,7 +3356,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         <configuration>
-                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -1258,7 +3383,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             <rules>
-                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                                 
                                 
                                 
@@ -1268,7 +3410,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                                 
                                 
                                 <dependencyConvergence/>
-                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
@@ -1278,7 +3437,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                             
                             
                             </rules>
-                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -1288,7 +3464,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                         
                         
                         </configuration>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -1298,7 +3491,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                     
                     
                     </execution>
-                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1308,7 +3518,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 </executions>
-                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -1318,7 +3545,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             </plugin>
-                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1328,7 +3572,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         </plugins>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1338,7 +3599,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <!--Sometimes unfiltered resources cause unexpected behaviour, thus enable filtering.-->
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1348,7 +3626,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <resources>
-                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -1358,7 +3653,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             <resource>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1368,7 +3680,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <directory>src/main/resources</directory>
-                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1378,7 +3707,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
                 
                 
                 <filtering>true</filtering>
-                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -1388,7 +3734,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
             
             
             </resource>
-                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1398,7 +3761,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         </resources>
-                                                                            
+                                                                                                                                                                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1408,7 +3788,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     </build>
-                                        
+                                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1418,7 +3815,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     <parent>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1428,7 +3842,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <groupId>com.author.myproject</groupId>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1438,7 +3869,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <artifactId>my-project</artifactId>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1448,7 +3896,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <version>1.0.0</version>
-                                                                                
+                                                                                                                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1458,7 +3923,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
         
         
         <relativePath>../pom.xml</relativePath>
-                                                                            
+                                                                                                                                                                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1468,7 +3950,24 @@ AUTO-GENERATED FILE, CHANGES SHOULD BE DONE IN ./JPM.java or ./src/main/java/com
     
     
     </parent>
-                                    
+                                                                                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
