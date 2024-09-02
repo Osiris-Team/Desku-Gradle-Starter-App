@@ -17,6 +17,11 @@ gradle-app.setting
 /server/build/
 /shared/build/
 
+## Maven:
+**/target/
+**/.mvn/
+**/mvnw.cmd
+
 ## Java:
 *.class
 *.war
